@@ -1,0 +1,135 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Gaya dasar untuk body */
+body {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+}
+
+/* Gaya untuk judul */
+h2 {
+    text-align: center;
+    color: #ad0808;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+/* Gaya untuk tabel */
+.tabel-section {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ad0808;
+}
+
+th {
+    background-color: #ad0808;
+    color: #EFEEE5;
+}
+
+td {
+    background-color: #fff;
+    color: #333;
+}
+
+tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+tr:hover td {
+    background-color: #f1f1f1;
+}
+
+/* Gaya untuk tombol cetak dan simpan */
+.tombol-cetak {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.tombol-cetak button {
+    padding: 10px 20px;
+    background-color: #ad0808;
+    color: #EFEEE5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+}
+
+.tombol-cetak button:hover {
+    background-color: #8b0606;
+}
+
+/* Aturan CSS untuk media print */
+@media print {
+    /* Menyembunyikan tombol cetak dan simpan pada saat print */
+    .tombol-cetak {
+        display: none;
+    }
+
+    /* Menyembunyikan elemen selain tabel saat print */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Menyembunyikan header atau footer browser yang menampilkan tanggal atau 'Print Data Record' */
+    @page {
+        margin: 0;
+    }
+
+    /* Menyembunyikan teks yang biasanya muncul di header dan footer pencetakan browser */
+    .no-print {
+        display: none;
+    }
+
+    /* Penataan tabel saat print */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #ad0808;
+    }
+
+    th {
+        background-color: #ad0808;
+        color: #EFEEE5;
+    }
+
+    td {
+        background-color: #fff;
+        color: #333;
+    }
+
+    tr:nth-child(even) td {
+        background-color: #f9f9f9;
+    }
+
+    tr:hover td {
+        background-color: #f1f1f1;
+    }
+}
